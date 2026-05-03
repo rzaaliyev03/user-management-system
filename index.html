@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern User Management</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen text-white">
+
+    <div class="flex justify-center items-start gap-20 mt-24 px-10">
+
+        <!-- FORM -->
+        <div class="backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-3xl p-8 w-[350px]">
+
+            <h2 class="text-2xl font-semibold mb-6 text-center tracking-wide">
+                Create Account
+            </h2>
+
+            <form id="register" class="flex flex-col gap-4">
+                <center>
+                    <div id="selectAvatar" class=" h-30 w-30 rounded-full border border-dashed bg-transparent bg-cover bg-no-repeat"></div>
+                </center>
+                <input id="avatar" type="file" placeholder="Full Name" class="hidden" accept="image/*" required>
+
+                <input id="fullName" type="text" placeholder="Full Name"
+                    class="bg-white/10 border border-white/20 rounded-xl px-4 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                    required>
+
+                <input id="email" type="email" placeholder="Email"
+                    class="bg-white/10 border border-white/20 rounded-xl px-4 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                    required>
+
+                <input id="password" type="password" placeholder="Password"
+                    class="bg-white/10 border border-white/20 rounded-xl px-4 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                    required>
+
+                <input type="submit" id="sendBtn"
+                    class="mt-2 bg-gradient-to-r from-blue-500 to-indigo-600 py-2 rounded-xl font-medium hover:scale-105 active:scale-95 transition">
+
+
+            </form>
+        </div>
+
+        <!-- TABLE -->
+        <div class="backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-3xl p-6 w-[700px]">
+
+            <input id="search" type="text" placeholder="Search..."
+                class="w-full mb-5 bg-white/10 border border-white/20 rounded-xl px-4 py-2 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="text-gray-300 text-sm border-b border-white/20">
+                        <th class="py-3">#</th>
+                        <th>Avatar</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody class="text-gray-200"></tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
