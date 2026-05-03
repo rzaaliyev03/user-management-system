@@ -32,6 +32,8 @@ registerForm.addEventListener("submit", (e) => {
         localStorage.setItem("users", JSON.stringify(users));
 
         registerForm.reset();
+        selectAvatar.style.backgroundImage = "";
+        avatar.value = "";
         render();
     };
 
