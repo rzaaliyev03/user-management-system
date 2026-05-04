@@ -7,7 +7,7 @@ const registerForm = document.getElementById("register");
 const selectAvatar = document.getElementById("selectAvatar")
 const search = document.getElementById("search");
 let users = JSON.parse(localStorage.getItem("users")) || [];
-let id = users.length;
+let id = JSON.parse(localStorage.getItem("id")) || 0;
 
 render()
 
